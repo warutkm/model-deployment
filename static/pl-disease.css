@@ -1,0 +1,112 @@
+/* Background Cover */
+.background-cover {
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    background: url('Images/shutterstock_1.jpg') no-repeat center center/cover; /* Background Image */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Dim Effect */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dim effect */
+}
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 5;
+    background: transparent;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif; /* Updated Font */
+    color: white;
+    text-transform: uppercase; /* Optional: Makes it look more professional */
+    letter-spacing: 2px; /* Optional: Adds spacing for better readability */
+}
+
+
+
+/* AI Tool Section */
+.ai-tool-section {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* Headings and Text */
+.section-title {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Input and Buttons */
+.input-file {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    background: #333; /* Dark Background */
+    color: white; /* White Text */
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px;
+    border: none;
+    font-size: 16px;
+}
+
+/* Primary Button */
+.primary {
+    background: orange;
+    color: white;
+}
+
+.primary:hover {
+    background: #cc7000;
+}
+
+/* Secondary Button */
+.secondary {
+    border: 2px solid orange;
+    color: orange;
+    background: transparent;
+}
+
+.secondary:hover {
+    background: orange;
+    color: white;
+}

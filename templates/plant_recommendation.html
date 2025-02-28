@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Recommendation</title>
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+        /* Background Cover */
+        .background-cover {
+            position: relative;
+            width: 100%;
+            height: 110vh;
+            background: url('Images/pexels-navnidh-5458363.jpg') no-repeat center center/cover; /* Background Image */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Dim Effect */
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Dim effect */
+        }
+
+        /* Header */
+        header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            padding: 20px;
+            font-size: 2rem;
+            font-weight: bold;
+            color: white;
+            text-align: left;
+            padding-left: 50px;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* AI Tool Section */
+        .ai-tool-section {
+            position: relative;
+            z-index: 1;
+            color: white;
+            text-align: center;
+            width: 500px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Input and Buttons */
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: none;
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            border: none;
+            font-size: 16px;
+        }
+
+        /* Primary Button */
+        .primary {
+            background: orange;
+            color: white;
+        }
+
+        .primary:hover {
+            background: #cc7000;
+        }
+
+        /* Secondary Button */
+        .secondary {
+            border: 2px solid orange;
+            color: orange;
+            background: transparent;
+        }
+
+        .secondary:hover {
+            background: orange;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-cover">
+        <div class="overlay"></div>
+        <header>AgriAI</header>
+        
+        <div class="ai-tool-section">
+            <h1>Crop Recommendation</h1>
+            
+            <label for="nitrogen">Nitrogen</label>
+            <input type="number" id="nitrogen" placeholder="Enter Nitrogen value">
+
+            <label for="phosphorus">Phosphorus</label>
+            <input type="number" id="phosphorus" placeholder="Enter Phosphorus value">
+
+            <label for="potassium">Potassium</label>
+            <input type="number" id="potassium" placeholder="Enter Potassium value">
+
+            <label for="temperature">Temperature (°C)</label>
+            <input type="number" id="temperature" placeholder="Enter Temperature in °C">
+
+            <label for="humidity">Humidity (%)</label>
+            <input type="number" id="humidity" placeholder="Enter Humidity in %">
+
+            <label for="rainfall">Rainfall (mm)</label>
+            <input type="number" id="rainfall" placeholder="Enter Rainfall in mm">
+
+            <button class="btn primary" onclick="getRecommendation()">Get Recommendation</button>
+            <p id="output"></p>
+            <button class="btn secondary" onclick="window.location.href='demo.html'">Back</button>
+        </div>
+    </div>
+
+    <script>
+        function getRecommendation() {
+            let n = document.getElementById("nitrogen").value;
+            let p = document.getElementById("phosphorus").value;
+            let k = document.getElementById("potassium").value;
+            let temp = document.getElementById("temperature").value;
+            let humidity = document.getElementById("humidity").value;
+            let rainfall = document.getElementById("rainfall").value;
+
+            if (!n || !p || !k || !temp || !humidity || !rainfall) {
+                alert("Please fill all the fields.");
+                return;
+            }
+
+            document.getElementById("output").innerText = "Analyzing data for best crop recommendation...";
+            // Add backend API logic here to process the inputs and return the best crop.
+        }
+    </script>
+
+</body>
+</html>

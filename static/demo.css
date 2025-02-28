@@ -1,0 +1,361 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+/* Video Background */
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+    z-index: -1;
+}
+
+.background-video {
+    width: 100%;
+    height: 95%;
+    object-fit: cover; /* Ensures the video covers the entire area */
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 520;
+}
+
+.auth-buttons .login {
+    margin-right: 10px;
+    color: orange;
+    text-decoration: none;
+}
+
+.auth-buttons .join {
+    background: orange;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 10% 60px;
+    min-height: 100vh;
+}
+
+.hero-content {
+    max-width: 50%;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: #fffcfc;
+}
+
+.hero-content p {
+    margin: 10px 0;
+    color: #cac6c6;
+}
+
+.hero-buttons {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.primary {
+    background: orange;
+    color: white;
+    margin-right: 10px;
+}
+
+.secondary {
+    border: 2px solid orange;
+    color: orange;
+}
+
+/* Hero Image */
+.hero-image img {
+    width: 300px;
+}
+
+/* About Section */
+.about-section {
+    background: linear-gradient(135deg, #3b9d3b, #1e6f1e); /* Gradient green */
+    color: white;
+    text-align: center;
+    padding: 80px 10%;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.about-content h2 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Services Section */
+.services {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 10%;
+}
+
+.service-card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    width: 250px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.service-card img {
+    width: 120px;
+    margin-bottom: 30px;
+}
+
+.service-card h3 {
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.service-card p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.service-card .btn {
+    display: block;
+    margin-top: 15px;
+    background: orange; /* Keeping orange theme */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.service-card .btn:hover {
+    background: #cc7000; /* Slightly darker orange for hover */
+}
+
+/* AI Farming Solutions Section */
+.ai-farming-section {
+    text-align: center;
+    background-color: #ffffff;
+    padding: 50px 20px;
+}
+
+.ai-farming-section h3 {
+    color: green;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.ai-farming-section h1 {
+    font-size: 2.5rem;
+    margin-top: 10px;
+}
+
+.ai-farming-section p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Single Column Layout */
+.ai-service {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    margin: 50px auto;
+    padding: 40px;
+    width: 60%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.ai-service img {
+    width: 80px;
+    margin-right: 20px;
+}
+
+.ai-service h2 {
+    color: green;
+    text-align: left;
+}
+
+.ai-service p {
+    font-size: 1rem;
+    color: #444;
+    text-align: left;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .ai-service {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .ai-service img {
+        margin-bottom: 10px;
+    }
+
+    .ai-service h2,
+    .ai-service p {
+        text-align: center;
+    }
+}
+
+
+
+/* Contact Section */
+.contact {
+    background: #222;
+    color: white;
+    padding: 80px 10%;
+    text-align: center;
+    margin-top: 50px;
+    
+}
+
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #32CD32;
+}
+
+.sub-heading {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 40px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.contact-form, .contact-info {
+    flex: 1;
+    text-align: left;
+    margin-left: 50px;
+    
+  
+}
+
+
+.contact-form h3,
+.contact-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    
+
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+.contact-form .btn {
+    width: 100%;
+    background:#32CD32;
+    color: black;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form .btn:hover {
+    background:#cc7000;
+}
+
+/* Contact Info */
+.contact-info p {
+    margin-bottom: 15px;
+}
+
+.contact-info a {
+    color: #32CD32;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}

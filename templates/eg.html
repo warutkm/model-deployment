@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Classifier | AgriAI</title>
+    <link rel="stylesheet" href="eg.css"> <!-- Link to main CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Header (Only Logo + Nav) -->
+    <header>
+        <div class="logo">AgriAI</div>
+  </header>
+
+    <!-- Background Cover -->
+    <div class="background-cover">
+        <div class="overlay"></div> <!-- Dim effect -->
+
+        <!-- AI Tool Section -->
+        <section class="ai-tool-section">
+            <h1 class="section-title">Plant Disease Classifier</h1>
+            <p class="section-description">Upload an image of a plant leaf to detect potential diseases.</p>
+
+            <div class="ai-tool">
+                <input type="file" id="imageInput" accept="image/*" class="input-file">
+                <button class="btn primary" onclick="classifyDisease()">Classify</button>
+                <p id="output" class="output-text"></p>
+                <button class="btn secondary" onclick="window.location.href='index.html'">Back to Home</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function classifyDisease() {
+            let image = document.getElementById("imageInput").files[0];
+            if (!image) {
+                alert("Please upload an image first.");
+                return;
+            }
+            document.getElementById("output").innerText = "Processing image...";
+            // Add backend logic here to classify the disease.
+        }
+    </script>
+
+</body>
+</html>
